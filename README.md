@@ -1,4 +1,4 @@
-<strong> Dear Reader,</strong> 
+ Dear Reader,
  Please follow the instructions in this file, if you want to run the application smoothly
 
  <strong> Step 1: </strong> Install Golang on your computer. (https://go.dev/doc/install)<br /> 
@@ -10,3 +10,5 @@
  <strong>Step 7: </strong> In the last terminal type "./client localhost:8080 5". Instead of 8080 use any of the ports you initiated, and instead of 5, you can use any number to double it. <br /> 
 
 Done!
+
+![screen-recording-2023-09-30-at-1](https://github.com/ADA-GWU/understanding-the-systems-with-complex-connections-BayramovAnar/assets/98649599/bba101e5-d223-4122-86ab-16308e7c314e)
