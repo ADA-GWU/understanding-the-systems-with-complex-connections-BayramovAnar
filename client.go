@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"net"
 	"os"
 )
 
 func main() {
 	//Checking command line arguments
-	if len(os.Args) != 3{
+	if len(os.Args) != 3 {
 		fmt.Println("<server:port> <number>")
 		os.Exit(1)
 	}
@@ -20,7 +19,7 @@ func main() {
 
 	//Make a connection to server
 	conn, err := net.Dial("tcp", servAddr)
-	if err != nil{
+	if err != nil {
 		fmt.Println("Can't connect to server:", err)
 		os.Exit(1)
 	}
@@ -29,15 +28,15 @@ func main() {
 
 	//Send the number in the form of the string
 	_, err = conn.Write([]byte(number))
-	if err != nil{
+	if err != nil {
 		fmt.Println("Can't send data:", err)
 		os.Exit(1)
 	}
 
 	//read the response
 	buffer := make([]byte, 1024)
-	n, err != conn.Read(bubuffer)
-	if err != nil{
+	n, err := conn.Read(buffer)
+	if err != nil {
 		fmt.Println("Can't read response:", err)
 		os.Exit(1)
 	}
@@ -46,4 +45,3 @@ func main() {
 	response := string(buffer[:n])
 	fmt.Println("Server response:", response)
 }
-
